@@ -1,0 +1,47 @@
+* { margin: 0; padding: 0; }
+
+#wrap {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: linear-gradient(90deg, rgba(129,124,218,1) 0%, rgba(145,208,185,1) 50%, rgba(126,233,255,1) 100%);
+
+    /* 애니메이션 */
+    animation-name: ball;                   /* 애니메이션 이름 */
+    animation-duration: 3s;                 /* 재생시간 */
+    animation-timing-function: linear;      /* 타이밍 함수 */
+    animation-iteration-count: infinite;    /* 반복 횟수 */
+}
+
+
+#wrap h1 { line-height: 200px; color: white; text-align: center; }
+
+/* 애니메이션의 변경지점을 지정하는 속성 */
+@keyframes ball {
+
+    /* 시작위치 from or 0% */
+    from {
+        left: 0;
+        transform: rotate(0deg);
+    }
+
+/*     25% {
+        transform: rotate(180deg);
+    } */
+
+    50% {
+        left: 500px;
+        transform: rotate(360deg);      /* 중간결과만 찍혀도 가능 */
+    }
+
+/*     75% {
+        transform: rotate(180deg);
+    } */
+
+    /* 종료위치 to or 100% */
+    to {
+        left: 0;
+        transform: rotate(0deg);
+    }
+}
